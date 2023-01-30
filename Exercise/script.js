@@ -8,7 +8,6 @@
  */
 
 $(document).ready(function () {
-    let currVal = 0;
 
     $('#addTask').click(function(event){
         if($('.textbox').val().trim() == "") {
