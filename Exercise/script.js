@@ -11,7 +11,6 @@ $(document).ready(function () {
     let currVal = 0;
 
     $('#addTask').click(function(event){
-        currVal++;
         if($('.textbox').val().trim() == "") {
             alert("Error: Please enter a task first")
         }
@@ -23,9 +22,6 @@ $(document).ready(function () {
         }
 
         $('.textbox').val("");
-
-        
-        event.stopPropagation()
     })
 
 });
