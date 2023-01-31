@@ -9,6 +9,8 @@
 
 $(document).ready(function () {
 
+    const notcompList = document.querySelector(".notCompleted");
+
     $('#addTask').click(function(event){
         if($('.textbox').val().trim() == "") {
             alert("Error: Please enter a task first")
@@ -21,6 +23,15 @@ $(document).ready(function () {
         }
 
         $('.textbox').val("");
+    })
+
+
+    notcompList.addEventListener('click', function(e){
+        const taskDelete = e.target.parentNode
+        notcompList.removeChild(taskDelete);
+
+        const doneTask = e.target.previousElementSibling;
+        $('.completed').append(doneTask);
     })
 
 });
